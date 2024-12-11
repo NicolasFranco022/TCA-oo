@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="550" prefWidth="600" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tca.Controllers.AgendamentoController"
+    style="-fx-background-image: url('file:///C:/Users/nicolas/Desktop/Codes/Nova%20pasta/TCA/tcafinal/src/main/java/com/tca/images/nature-background.jpg'); 
+           -fx-background-size: cover; 
+           -fx-background-position: center;">
+
+    <!-- Camada semitransparente por cima da imagem -->
+    <AnchorPane style="-fx-background-color: rgba(0, 0, 0, 0.3);">
+        
+        <VBox alignment="CENTER" layoutX="25" layoutY="25" prefWidth="550" spacing="20">
+        
+            <Label alignment="CENTER" maxWidth="500" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #FFFFFF; -fx-padding: 10;                        
+            -fx-background-color: #A5D6A7; -fx-background-radius: 15;" text="Agendamento Veterinário" />
+
+            <VBox alignment="CENTER" spacing="15">
+                <VBox spacing="10">
+                    <Label style="-fx-font-size: 18px; -fx-text-fill: #FFFFFF;" text="Dados do Dono" />
+                    <TextField fx:id="nomeDonoField" promptText="Nome do Dono" style="-fx-background-radius: 15; -fx-padding: 10;" />
+                    <TextField fx:id="telefoneDonoField" promptText="Telefone do Dono" style="-fx-background-radius: 15; -fx-padding: 10;" />
+                    <TextField fx:id="emailDonoField" promptText="Email do Dono" style="-fx-background-radius: 15; -fx-padding: 10;" />
+                </VBox>
+
+                <VBox spacing="10">
+                    <Label style="-fx-font-size: 18px; -fx-text-fill: #FFFFFF;" text="Dados do Pet" />
+                    <TextField fx:id="nomePetField" promptText="Nome do Pet" style="-fx-background-radius: 15; -fx-padding: 10;" />
+                    <TextField fx:id="racaPetField" promptText="Raça do Pet" style="-fx-background-radius: 15; -fx-padding: 10;" />
+                    <TextField fx:id="tipoPetField" promptText="Informe o tipo de Pet (Cachorro, Gato, etc.)" style="-fx-background-radius: 15; -fx-padding: 10;" />
+                    <TextField fx:id="idadePetField" promptText="Idade do Pet" style="-fx-background-radius: 15; -fx-padding: 10;" />
+                </VBox>
+
+                <!-- Botões para selecionar o sexo do pet -->
+                <VBox spacing="10">
+                    <Label style="-fx-font-size: 18px; -fx-text-fill: #FFFFFF;" text="Sexo do Pet" />
+                    <HBox alignment="CENTER" spacing="20">
+                        <Button fx:id="machoButton" onAction="#selecionarSexo" style="-fx-background-radius: 15; -fx-padding: 10;" text="Macho" />
+                        <Button fx:id="femeaButton" onAction="#selecionarSexo" style="-fx-background-radius: 15; -fx-padding: 10;" text="Fêmea" />
+                    </HBox>
+                </VBox>
+
+                <VBox spacing="10">
+                    <Label style="-fx-font-size: 18px; -fx-text-fill: #FFFFFF;" text="Motivo do Agendamento" />
+                    <TextField fx:id="motivoAgendamentoField" promptText="Motivo" style="-fx-background-radius: 15; -fx-padding: 10;" />
+                </VBox>
+
+                <VBox spacing="10">
+                    <Label style="-fx-font-size: 18px; -fx-text-fill: #FFFFFF;" text="Data do Agendamento" />
+                    <DatePicker fx:id="dataAgendamentoPicker" style="-fx-background-radius: 15; -fx-padding: 10;" />
+                </VBox>
+
+                <VBox spacing="10" />
+            </VBox>
+
+            <HBox alignment="CENTER" spacing="20">
+                <Button onAction="#salvarAgendamento" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;                             -fx-background-radius: 50; -fx-pref-width: 120; -fx-pref-height: 40;" text="Salvar" />
+                <Button style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px;                             -fx-background-radius: 50; -fx-pref-width: 120; -fx-pref-height: 40;" text="Cancelar" />
+            </HBox>
+        </VBox>
+    </AnchorPane>
+</AnchorPane>
