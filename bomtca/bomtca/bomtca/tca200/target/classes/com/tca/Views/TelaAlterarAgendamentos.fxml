@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.tca.Controllers.AlterarAgendamentosController" spacing="15" alignment="CENTER" prefWidth="400">
+
+    <Label text="Alterar Agendamento" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <GridPane hgap="10" vgap="10" alignment="CENTER" prefWidth="380">
+        <!-- Alterar Dono -->
+        <CheckBox fx:id="alterarDonoCheckBox" text="Alterar Informações do Dono" onAction="#toggleDonoFields" GridPane.columnSpan="2" />
+
+        <Label text="Nome do Dono:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="nomeDonoField" GridPane.columnIndex="1" GridPane.rowIndex="1" editable="false"/>
+
+        <Label text="Telefone do Dono:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="telefoneDonoField" GridPane.columnIndex="1" GridPane.rowIndex="2" editable="false"/>
+
+        <Label text="Email do Dono:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="emailDonoField" GridPane.columnIndex="1" GridPane.rowIndex="3" editable="false"/>
+        
+        <!-- Alterar Pet -->
+        <CheckBox fx:id="alterarPetCheckBox" text="Alterar Informações do Pet" onAction="#togglePetFields" GridPane.columnSpan="2" GridPane.rowIndex="4"/>
+
+        <Label text="Nome do Pet:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <TextField fx:id="nomePetField" GridPane.columnIndex="1" GridPane.rowIndex="5" editable="false"/>
+
+        <Label text="Raça do Pet:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+        <TextField fx:id="racaPetField" GridPane.columnIndex="1" GridPane.rowIndex="6" editable="false"/>
+
+        <Label text="Tipo do Pet:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+        <TextField fx:id="tipoPetField" GridPane.columnIndex="1" GridPane.rowIndex="7" editable="false"/>
+
+        <Label text="Idade do Pet:" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+        <TextField fx:id="idadePetField" GridPane.columnIndex="1" GridPane.rowIndex="8" editable="false"/>
+
+        <Label text="Sexo do Pet:" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+        <TextField fx:id="sexoPetField" GridPane.columnIndex="1" GridPane.rowIndex="9" editable="false"/>
+
+        <!-- Alterar Data -->
+        <CheckBox fx:id="alterarDataCheckBox" text="Alterar Data" onAction="#toggleDataField" GridPane.rowIndex="10"/>
+
+        <Label text="Data do Agendamento:" GridPane.columnIndex="0" GridPane.rowIndex="11"/>
+        <DatePicker fx:id="dataAgendamentoPicker" GridPane.columnIndex="1" GridPane.rowIndex="11" editable="false"/>
+
+        <!-- Alterar Motivo -->
+        <CheckBox fx:id="alterarMotivoCheckBox" text="Alterar Motivo" onAction="#toggleMotivoField" GridPane.columnSpan="2" GridPane.rowIndex="12"/>
+
+        <Label text="Motivo da Consulta:" GridPane.columnIndex="0" GridPane.rowIndex="13"/>
+        <TextField fx:id="motivoConsultaField" GridPane.columnIndex="1" GridPane.rowIndex="13" editable="false"/>
+    </GridPane>
+
+    <!-- Botões -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="salvarButton" text="Salvar" onAction="#salvar"/>
+
+        <Button fx:id="cancelarButton" text="Cancelar" onAction="#cancelar"/>
+    </HBox>
+</VBox>
